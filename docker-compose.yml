@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  app:
+    container_name: challenge_pharma
+    image: img_challenge_pharma
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - challenge_db
+  challenge_db:
+    image: postgres
+    ports:
+      - "5432-5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=db-pharma

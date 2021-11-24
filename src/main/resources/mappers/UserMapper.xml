@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.challenge.pharmainc.mapper.UserMapper">
+
+
+    <insert id="addList">
+
+    </insert>
+
+    <sql id="fieldsUser">
+
+    </sql>
+
+    <resultMap id="rmUser" type="com.challenge.pharmainc.model.User">
+        <id column="id" property="id"/>
+        <result column="cell" property="cell"/>11
+
+    </resultMap>
+
+    <select id="findById" resultMap="rmUser">
+        select
+        <include refid="fieldsUser"/>
+        from public.tbl_user
+        where id = #{id}
+    </select>
+</mapper>

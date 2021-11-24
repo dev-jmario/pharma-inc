@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://challenge_db:5432/db-pharma?currentSchema=public
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: 'create-drop'
+  hosts:
+    random-user: https://randomuser.me/api
+    random-perpage: 100
+    random-limit: 2000
+  exec:
+    hour: 12
+    minute: 00
